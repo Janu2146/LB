@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lakshmi Bhavan — Choose View</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="theme-color" content="#0b6efd">
+  </head>
+  <body>
+    <header class="header">
+      <img src="logo.png" alt="Lakshmi Bhavan logo" class="logo">
+    </header>
+
+    <main style="display:flex;flex-direction:column;align-items:center;gap:18px;padding:40px;">
+      <h2 style="margin:0 0 8px 0">Choose an interface</h2>
+      <p style="color:#666;margin:0 0 18px 0">Select the view you want to open.</p>
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+        <a class="big-link" href="/admin.html" style="text-decoration:none">
+          <button class="btn" style="min-width:220px;height:90px;font-size:20px">Admin — Mark Ready</button>
+        </a>
+
+        <a class="big-link" href="/display.html" style="text-decoration:none">
+          <button class="btn" style="min-width:220px;height:90px;font-size:20px;background:#0b6efd;color:#fff">Display — TV View</button>
+        </a>
+      </div>
+    </main>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js').catch(()=>{});
+      }
+    </script>
+  </body>
+</html>
